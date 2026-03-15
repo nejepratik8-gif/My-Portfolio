@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>My Portfolio</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* basic reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial;
+}
+
+body{
+line-height:1.5;
+}
+
+/* navigation */
+
+nav{
+background:royalblue;
+padding:15px;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+}
+
+nav ul li{
+margin:0 15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* hero section */
+
+.hero{
+background:royalblue;
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+margin-bottom:10px;
+}
+
+.hero p{
+margin-bottom:20px;
+}
+
+.btn{
+background:white;
+color:royalblue;
+padding:8px 15px;
+text-decoration:none;
+border-radius:5px;
+}
+
+/* sections */
+
+section{
+padding:40px;
+max-width:1000px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+/* about */
+
+.about-content{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.profile{
+width:150px;
+height:150px;
+background:whitesmoke;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+}
+
+/* skills */
+
+.skills{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.skill-card{
+border:1px solid white;
+padding:20px;
+flex:1;
+}
+
+.skill-bar{
+background:dodgerblue;
+height:10px;
+margin-top:10px;
+}
+
+.skill-progress{
+background:dodgerblue;
+height:10px;
+width:0%;
+}
+
+/* projects */
+
+.projects{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.project{
+border:1px solid #ddd;
+padding:20px;
+flex:1;
+}
+
+/* contact */
+
+.contact-form{
+max-width:400px;
+margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+border:1px solid #ccc;
+}
+
+.submit-btn{
+background:royalblue;
+color:white;
+padding:10px;
+border:none;
+cursor:pointer;
+}
+
+/* footer */
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- navigation -->
+
+<nav>
+<ul>
+<li><a href="#home" class="nav-link">Home</a></li>
+<li><a href="#about" class="nav-link">About</a></li>
+<li><a href="#skills" class="nav-link">Skills</a></li>
+<li><a href="#projects" class="nav-link">Projects</a></li>
+<li><a href="#contact" class="nav-link">Contact</a></li>
+</ul>
+</nav>
+
+<!-- hero -->
+
+<section id="home" class="hero">
+
+<h1>Hello, I am Pratik</h1>
+<p>I am learning web development.</p>
+
+<a href="#contact" class="btn">Contact Me</a>
+
+</section>
+
+<!-- about section of my portfolio -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<div class="about-content">
+
+<div class="profile">👨‍💻</div>
+
+<div>
+
+<p>I am a MCA student who is interested in web development.</p>
+
+<p>I like to create websites using HTML, CSS and JavaScript.</p>
+
+<p>Currently I am learning frontend development.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!--My  skills section -->
+
+<section id="skills">
+
+<h2>My Skills</h2>
+
+<div class="skills">
+
+<div class="skill-card" data-skill="90">
+
+<h3>HTML</h3>
+<p>I can create webpage structure.</p>
+
+<div class="skill-bar">
+<div class="skill-progress"></div>
+</div>
+
+</div>
+
+<div class="skill-card" data-skill="80">
+
+<h3>CSS</h3>
+<p>I use css to make webpages look better.</p>
+
+<div class="skill-bar">
+<div class="skill-progress"></div>
+</div>
+
+</div>
+
+<div class="skill-card" data-skill="70">
+
+<h3>JavaScript</h3>
+<p>I can add interactivity.</p>
+
+<div class="skill-bar">
+<div class="skill-progress"></div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- projects -->
+
+<section id="projects">
+
+<h2>My Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>Portfolio Website</h3>
+<p>A simple portfolio made using HTML and CSS.</p>
+</div>
+
+<div class="project">
+<h3>Responsive Page</h3>
+<p>A webpage that works on mobile.</p>
+</div>
+
+<div class="project">
+<h3>UI Design</h3>
+<p>Basic UI created using CSS.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- contact -->
+
+<section id="contact">
+
+<h2>Contact Me</h2>
+
+<form class="contact-form" id="contactForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<textarea id="message" placeholder="Your Message" required></textarea>
+
+<button type="submit" class="submit-btn">Send</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 My Portfolio</p>
+
+</footer>
+
+<script>
+
+/* smooth scroll */
+
+document.querySelectorAll(".nav-link").forEach(link => {
+
+link.addEventListener("click", function(e){
+
+e.preventDefault()
+
+let target = this.getAttribute("href")
+
+document.querySelector(target).scrollIntoView({
+behavior:"smooth"
+})
+
+})
+
+})
+
+/* skill animation */
+
+function showSkills(){
+
+let cards = document.querySelectorAll(".skill-card")
+
+cards.forEach(card => {
+
+let position = card.getBoundingClientRect().top
+
+if(position < window.innerHeight){
+
+let value = card.getAttribute("data-skill")
+
+let progress = card.querySelector(".skill-progress")
+
+progress.style.width = value + "%"
+
+}
+
+})
+
+}
+
+window.addEventListener("scroll", showSkills)
+
+</script>
+
+</body>
+</html>
